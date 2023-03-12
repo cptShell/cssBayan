@@ -126,7 +126,14 @@ table {
 body {
   display: flex;
   justify-content: center;
+  color: white;
   font-family: 'Tilt Warp', cursive;
+  background: rgb(136, 189, 198);
+  background: linear-gradient(
+    335deg,
+    rgba(136, 189, 198, 1) 0%,
+    rgba(27, 241, 151, 1) 100%
+  );
 }
 
 h1 {
@@ -146,6 +153,9 @@ input {
 }
 
 .meme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   min-width: 320px;
   width: 50vw;
 }
@@ -154,6 +164,10 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-top: 2px solid white;
+}
+.meme-item:first-child {
+  border: none;
 }
 
 .meme-header {
@@ -167,6 +181,9 @@ input {
 }
 
 .toggle-icon {
+  border-radius: 50em;
+  border: 3px solid white;
+  transform: scale(0.7);
 }
 
 .meme-container {
