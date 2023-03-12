@@ -5,16 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
     <title>cssBayan</title>
   </head>
   <body>
     <div class="main-content">
       <h1>CSS Bayan</h1>
       <ul class="meme-list">
-        <li class="meme-item"></li>
-        <li class="meme-item"></li>
-        <li class="meme-item"></li>
-        <li class="meme-item"></li>
+        <li class="meme-item">
+          <input type="radio" for="meme-1" name="meme" checked />
+          <label class="meme-header" for="meme-1">
+            <h2 class="meme-title">Meme 1</h2>
+            <img class="toggle-icon" src="./assets/toggle-icon.svg" />
+          </label>
+          <label class="meme-container" for="meme-1">
+            <img src="./assets/meme.jpg" alt="meme" />
+          </label>
+        </li>
+        <li class="meme-item">
+          <input type="radio" for="meme-2" name="meme" checked />
+          <label class="meme-header" for="meme-2">
+            <h2 class="meme-title">Meme 2</h2>
+            <img class="toggle-icon" src="./assets/toggle-icon.svg" />
+          </label>
+          <label class="meme-container" for="meme-2">
+            <img class="meme-img" src="./assets/meme.jpg" alt="meme" />
+          </label>
+        </li>
+        <li class="meme-item">
+          <input type="radio" for="meme-3" name="meme" checked />
+          <label class="meme-header" for="meme-3">
+            <h2 class="meme-title">Meme 3</h2>
+            <img class="toggle-icon" src="./assets/toggle-icon.svg" />
+          </label>
+          <label class="meme-container" for="meme-3">
+            <img class="meme-img" src="./assets/meme.jpg" alt="meme" />
+          </label>
+        </li>
+        <li class="meme-item">
+          <input type="radio" for="meme-4" name="meme" checked />
+          <label class="meme-header" for="meme-4">
+            <h2 class="meme-title">Meme 4</h2>
+            <img class="toggle-icon" src="./assets/toggle-icon.svg" />
+          </label>
+          <label class="meme-container" for="meme-4">
+            <img class="meme-img" src="./assets/meme.jpg" alt="meme" />
+          </label>
+        </li>
       </ul>
     </div>
   </body>

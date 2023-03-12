@@ -126,15 +126,52 @@ table {
 body {
   display: flex;
   justify-content: center;
+  font-family: 'Tilt Warp', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+input {
+  display: none;
 }
 
 .main-content {
   display: flex;
-  flex: 1 0 1024px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
 }
 
 .meme-list {
+  min-width: 320px;
+  width: 50vw;
 }
 
-.meme.item {
+.meme-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meme-title {
+  font-size: 1.6em;
+}
+
+.toggle-icon {
+}
+
+.meme-container {
+}
+
+.meme-img {
+  width: 100%;
 }
