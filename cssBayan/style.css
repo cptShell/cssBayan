@@ -122,3 +122,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  display: flex;
+  flex: 1 0 1024px;
+}
+
+.meme-list {
+}
+
+.meme.item {
+}
