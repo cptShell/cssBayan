@@ -1,132 +1,3 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-label {
-  cursor: pointer;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -200,14 +71,6 @@ input:checked ~ .border {
   transition: height ease 350ms;
 }
 
-.meme-item:hover .meme-container {
-  height: calc(50vw * 5 / 6);
-}
-.meme-item:hover .toggle-icon {
-  border: 0.2em solid white;
-  transform: rotate(-135deg);
-}
-
 .meme-img {
   width: 100%;
   transition: opacity ease 350ms;
@@ -225,27 +88,28 @@ input[id^='meme-']:checked ~ .meme-header .toggle-icon {
   transform: rotate(-135deg);
 }
 
-.main-content:not(:hover) .toggle-icon {
-  opacity: 0;
-}
-
-.main-content:not(:hover) input[id^='meme-']:checked ~ .meme-header {
-  opacity: 1;
-}
-
-.main-content:hover .meme-item:active .meme-header {
-  opacity: 1;
-}
-.main-content:hover .meme-item:active .meme-img {
-  opacity: 0.5;
-}
-
-@media screen and (max-width: 520px) {
-  input[id^='meme-']:checked ~ .meme-container {
-    height: 13.5em;
+@media (hover: hover) {
+  .main-content:not(:hover) .toggle-icon {
+    opacity: 0;
   }
+
+  .main-content:not(:hover) input[id^='meme-']:checked ~ .meme-header {
+    opacity: 1;
+  }
+
+  .main-content:hover .meme-item:active .meme-header {
+    opacity: 1;
+  }
+  .main-content:hover .meme-item:active .meme-img {
+    opacity: 0.5;
+  }
+
   .meme-item:hover .meme-container {
-    height: 13.5em;
+    height: calc(50vw * 5 / 6);
+  }
+  .meme-item:hover .toggle-icon {
+    border: 0.2em solid white;
+    transform: rotate(-135deg);
   }
 }
 
@@ -255,6 +119,17 @@ input[id^='meme-']:checked ~ .meme-header .toggle-icon {
   }
   .meme-title {
     font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  input[id^='meme-']:checked ~ .meme-container {
+    height: 13.5em;
+  }
+  @media (hover: hover) {
+    .meme-item:hover .meme-container {
+      height: 13.5em;
+    }
   }
 }
 
