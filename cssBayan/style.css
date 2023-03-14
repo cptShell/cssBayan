@@ -1,0 +1,143 @@
+body {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Tilt Warp', cursive;
+  background: rgb(136, 189, 198);
+  background: linear-gradient(
+    90deg,
+    rgba(136, 189, 198, 1) 0%,
+    rgba(27, 241, 151, 1) 100%
+  );
+  overflow-y: scroll;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+input:checked ~ .border {
+  background-color: gold;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.meme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-width: 16em;
+  width: 50vw;
+}
+
+.meme-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-top: 0.3em;
+  border-top: 0.1em solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.meme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity ease 350ms;
+  opacity: 0.5;
+}
+
+.meme-title {
+  font-size: 2em;
+}
+
+.toggle-icon {
+  width: 2em;
+  height: 2em;
+  border: 0.2em solid rgba(255, 255, 255, 0);
+  border-radius: 50em;
+  transition: all ease 350ms;
+}
+
+.meme-container {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 350ms;
+}
+
+.meme-img {
+  width: 100%;
+  transition: opacity ease 350ms;
+}
+
+input {
+  display: none;
+}
+
+input[id^='meme-']:checked ~ .meme-container {
+  height: calc(50vw * 5 / 6);
+}
+input[id^='meme-']:checked ~ .meme-header .toggle-icon {
+  border: 0.2em solid white;
+  transform: rotate(-135deg);
+}
+
+@media (hover: hover) {
+  .main-content:not(:hover) .toggle-icon {
+    opacity: 0;
+  }
+
+  .main-content:not(:hover) input[id^='meme-']:checked ~ .meme-header {
+    opacity: 1;
+  }
+
+  .main-content:hover .meme-item:active .meme-header {
+    opacity: 1;
+  }
+  .main-content:hover .meme-item:active .meme-img {
+    opacity: 0.5;
+  }
+
+  .meme-item:hover .meme-container {
+    height: calc(50vw * 5 / 6);
+  }
+  .meme-item:hover .toggle-icon {
+    border: 0.2em solid white;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2.4em;
+  }
+  .meme-title {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  input[id^='meme-']:checked ~ .meme-container {
+    height: 13.5em;
+  }
+  @media (hover: hover) {
+    .meme-item:hover .meme-container {
+      height: 13.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
+  .meme-title {
+    font-size: 1.2em;
+  }
+}
